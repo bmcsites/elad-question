@@ -11,12 +11,7 @@ export class HeaderComponent{
 
   constructor(public route: ActivatedRoute) {
     this.links = [
-      { title: 'home', fragment: '/' },
-      { title: 'directive', fragment: '/directive' },
-      { title: 'pipe', fragment: '/pipe' },
-      { title: 'tab', fragment: '/tab' },
-      { title: 'test', fragment: '/test' },
-      { title: 'users', fragment: '/users' }
+      { title: 'home', fragment: '/' }
     ];
   }
 }

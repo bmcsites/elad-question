@@ -1,0 +1,41 @@
+$bg-my-color: rgb(226, 232, 240);
+
+.card-box {
+  padding: 20px;
+  border-radius: 1rem;
+  border-color: $bg-my-color;
+  box-shadow: rgba(0, 0, 0, 0) 0 0, rgba(0, 0, 0, 0) 0 0, rgba(0, 0, 0, 0.1) 0 1px 3px 0, rgba(0, 0, 0, 0.1) 0 1px 2px -1px;
+  overflow: hidden;
+  border-width: 0;
+  display: flex;
+  -webkit-tap-highlight-color: transparent;
+  height: 24rem;
+  border-style: solid;
+  flex-direction: column;
+  text-rendering: optimizelegibility;
+  box-sizing: border-box;
+  background-color: white;
+  .card-item {
+    border-color: $bg-my-color;
+    border-width: 0;
+    padding: 1.5rem;
+    border-style: solid;
+    flex-direction: column;
+    display: flex;
+    box-sizing: border-box;
+    text-rendering: optimizelegibility;
+    -webkit-tap-highlight-color: transparent;
+    .card-header {
+      border-color: $bg-my-color;
+      border-width: 0;
+      border-style: solid;
+      display: flex;
+      align-items: center;
+      box-sizing: border-box;
+      justify-content: space-between;
+      text-rendering: optimizelegibility;
+      -webkit-tap-highlight-color: transparent;
+    }
+  }
+}
+

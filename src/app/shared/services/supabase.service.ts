@@ -6,8 +6,8 @@ import {
   Session,
   SupabaseClient,
   User,
-} from '@supabase/supabase-js'
-import { environment } from '@env/environment'
+} from '@supabase/supabase-js';
+import { environment } from '@env/environment';
 
 export interface Profile {
   id?: string
@@ -19,6 +19,7 @@ export interface Profile {
 @Injectable({
   providedIn: 'root',
 })
+
 export class SupabaseService {
   private supabase: SupabaseClient
   _session: AuthSession | null = null
@@ -84,29 +85,9 @@ export class SupabaseService {
     return this.supabase.storage.from('avatars').upload(filePath, file)
   }
 
-  async getGuitars(range: any) {
+  async getTopics() {
     try {
-      const fulfilledValue = await this.supabase.from('guitars').select('*').range(range.from, range.to);
-      return fulfilledValue;
-    } catch (e) {
-      console.log('error');
-      return null;
-    }
-  }
-
-  async getGuitarById(id: number) {
-    try {
-      const fulfilledValue = await this.supabase.from('guitars').select('*').eq('id', id);
-      return fulfilledValue;
-    } catch (e) {
-      console.log('error');
-      return null;
-    }
-  }
-
-  async getGuitarsCount() {
-    try {
-      const fulfilledValue = await this.supabase.from('guitars').select('*', { count: 'exact', head: true })
+      const fulfilledValue = await this.supabase.from('topics').select('*');
       return fulfilledValue;
     } catch (e) {
       console.log('error');

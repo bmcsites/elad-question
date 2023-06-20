@@ -24,17 +24,8 @@ export class AppService {
   private isIE!: boolean;
 
   constructor(@Inject(DOCUMENT) private document: Document, public deviceService: DeviceDetectorService) {
-    this.startListeners();
     this.setScreenResize();
     this.setDeviceInfo();
-  }
-
-  startListeners() {
-    // this.document.addEventListener('click', event => console.log('click', event));
-    // this.document.addEventListener('input',  event => console.log('input', event));
-    // this.document.addEventListener('change', event => console.log('change', event));
-    // window.addEventListener('resize', () => this.setScreenResize());
-    // window.addEventListener('beforeunload', event => this.beforeUnload(event));
   }
 
   setScreenResize() {

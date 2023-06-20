@@ -1,0 +1,14 @@
+<div class="card-box" *ngIf="topic">
+  <div class="card-item">
+    <div class="card-header">
+      {{topic.topic}}
+    </div>
+    <div class="card-body">
+      {{topic.description}}
+    </div>
+    <div class="card-footer">
+      <div class="q-num">{{topic.questions}}</div>
+      <button class="btn btn-dark">כניסה</button>
+    </div>
+  </div>
+</div>
