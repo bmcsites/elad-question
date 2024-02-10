@@ -1,0 +1,35 @@
+<div class="all-topic-items">
+  <div class="my-space"></div>
+  <div class="row topic-item" *ngIf="documentationList">
+    <h3>רשימת מסמכים</h3>
+    <div class="col-12">
+      <app-smart-table
+        [headers]="documentationList.headers"
+        [items]="documentationList.items"
+        (action)="tableActionEvent($event)">
+      </app-smart-table>
+    </div>
+  </div>
+  <div class="my-space"></div>
+  <div class="row topic-item" *ngIf="videoList">
+    <h3>רשימת סרטונים</h3>
+    <div class="col-12">
+      <app-smart-table
+        [headers]="videoList.headers"
+        [items]="videoList.items"
+        (action)="tableActionEvent($event)">
+      </app-smart-table>
+    </div>
+  </div>
+  <div class="my-space"></div>
+  <div class="row topic-item" *ngIf="quizList">
+    <h3>רשימת מבחנים</h3>
+    <div class="col-12">
+      <app-smart-table
+        [headers]="quizList.headers"
+        [items]="quizList.items"
+        (action)="tableActionEvent($event)">
+      </app-smart-table>
+    </div>
+  </div>
+</div>

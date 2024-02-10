@@ -11,7 +11,11 @@ export class HeaderComponent{
 
   constructor(public route: ActivatedRoute) {
     this.links = [
-      { title: 'home', fragment: '/' }
+      { title: 'דף הבית', fragment: '/' },
+      { title: 'מודול 1', fragment: '/module/11111' },
+      { title: 'מודול 2', fragment: '/module/22222' },
+      { title: 'מודול 3', fragment: '/module/33333' },
+      { title: 'מודול 4', fragment: '/module/44444' }
     ];
   }
 }

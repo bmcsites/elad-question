@@ -10,6 +10,8 @@
   [class.ltr]="(appProperties.isRtl$ | async) !== true"
 >
   <app-header></app-header>
-  <router-outlet></router-outlet>
+  <div class="main-zone">
+    <router-outlet></router-outlet>
+  </div>
 </div>
 

@@ -1,7 +1,6 @@
 $bg-my-color: rgb(226, 232, 240);
 
 .card-box {
-  padding: 20px;
   border-radius: 1rem;
   border-color: $bg-my-color;
   box-shadow: rgba(0, 0, 0, 0) 0 0, rgba(0, 0, 0, 0) 0 0, rgba(0, 0, 0, 0.1) 0 1px 3px 0, rgba(0, 0, 0, 0.1) 0 1px 2px -1px;
@@ -9,7 +8,6 @@ $bg-my-color: rgb(226, 232, 240);
   border-width: 0;
   display: flex;
   -webkit-tap-highlight-color: transparent;
-  height: 24rem;
   border-style: solid;
   flex-direction: column;
   text-rendering: optimizelegibility;
@@ -18,7 +16,6 @@ $bg-my-color: rgb(226, 232, 240);
   .card-item {
     border-color: $bg-my-color;
     border-width: 0;
-    padding: 1.5rem;
     border-style: solid;
     flex-direction: column;
     display: flex;
@@ -26,6 +23,7 @@ $bg-my-color: rgb(226, 232, 240);
     text-rendering: optimizelegibility;
     -webkit-tap-highlight-color: transparent;
     .card-header {
+      padding: 20px 15px 0 15px;
       border-color: $bg-my-color;
       border-width: 0;
       border-style: solid;
@@ -35,6 +33,27 @@ $bg-my-color: rgb(226, 232, 240);
       justify-content: space-between;
       text-rendering: optimizelegibility;
       -webkit-tap-highlight-color: transparent;
+    }
+    .card-body {
+      padding: 20px;
+      .card-main-body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        min-height: 150px;
+        ul li {
+          list-style: none;
+        }
+      }
+      span {
+        font-size: 11px;
+      }
+    }
+    .card-footer {
+      padding: 0 20px 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
   }
 }

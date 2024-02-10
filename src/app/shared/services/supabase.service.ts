@@ -30,7 +30,7 @@ export class SupabaseService {
   }
 
   get session() {
-    this.supabase.auth.getSession().then(({ data }) => {
+    this.supabase.auth.getSession().then(({ data}) => {
       this._session = data.session;
       console.log('session: ', this._session)
     })

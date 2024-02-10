@@ -13,7 +13,7 @@ export class AppService {
 
   private isUnder1680$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
 
-  private isRtl$ = new BehaviorSubject(false);
+  private isRtl$ = new BehaviorSubject(true);
 
   private deviceInfo: any = null;
 

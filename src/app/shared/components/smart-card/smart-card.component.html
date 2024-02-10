@@ -1,14 +1,17 @@
 <div class="card-box" *ngIf="topic">
   <div class="card-item">
     <div class="card-header">
-      {{topic.topic}}
+      <h5>{{topic.topic}}</h5>
     </div>
     <div class="card-body">
-      {{topic.description}}
+      <div class="card-main-body" [ngStyle]="{'height': showMore ? 'auto' : '150px'}">
+        <ng-content></ng-content>
+      </div>
+      <span (click)="showMore = !showMore">{{ showMore ? 'הצג פחות...' : 'הצג יותר...'}}</span>
     </div>
-    <div class="card-footer">
-      <div class="q-num">{{topic.questions}}</div>
-      <button class="btn btn-dark">כניסה</button>
+    <div class="card-footer" *ngIf="topic.footer">
+      <button class="btn btn-dark" [routerLink]="'/topic/' + topic.id">כניסה</button>
+      <div class="q-num"> סה"כ שאלות: {{topic.questions}}</div>
     </div>
   </div>
 </div>

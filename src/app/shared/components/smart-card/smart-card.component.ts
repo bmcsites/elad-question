@@ -9,6 +9,7 @@ import {Component, Input, OnInit} from '@angular/core';
 export class SmartCardComponent implements OnInit {
 
   @Input() topic!: any;
+  showMore = false;
 
   constructor() { }
 

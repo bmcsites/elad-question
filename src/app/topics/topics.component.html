@@ -1,9 +1,14 @@
-<div class="all-topics" *ngIf="topics">
+<div class="all-topics">
+  <h2>מודול 1</h2>
+  <div class="my-space"></div>
   <div class="row">
     <div
-      class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3"
+      class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 col-xxl-4"
       *ngFor="let topic of topics">
-      <app-smart-card [topic]="topic"></app-smart-card>
+      <app-smart-card [topic]="topic">
+        {{topic.description}}
+      </app-smart-card>
+      <div class="my-space"></div>
     </div>
   </div>
 </div>
